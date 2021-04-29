@@ -1,7 +1,18 @@
-import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Library from "./components/Library";
+import About from "./components/About";
+import NavBar from "./components/NavBar";
 
 function App() {
-  return <h1>App.js</h1>;
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <Switch>
+        <Route component={Library} path='/' exact />
+        <Route component={About} path='/about' />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;
