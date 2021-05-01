@@ -10,7 +10,7 @@ export default function Product() {
         `*[_type == "product"]{
             title,
             slug,
-            tags
+            link
         }`
       )
       .then((data) => setProduct(data))
@@ -23,9 +23,10 @@ export default function Product() {
           {productData &&
             productData.map((product, index) => (
               <article>
-                <Link
-                  to={"/" + product.slug.current}
-                  key={product.slug.current}
+                <a
+                  href={product.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <span
                     className='block h-16 relative rounded shadow leading-snug bg-white border-l-4 border-yellow-700'
@@ -37,7 +38,7 @@ export default function Product() {
                       </h3>
                     </span>
                   </span>
-                </Link>
+                </a>
               </article>
             ))}
         </div>
