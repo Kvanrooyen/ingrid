@@ -18,15 +18,9 @@ export default {
       },
     },
     {
-      name: "tags",
-      title: "Tags",
+      name: "link",
+      title: "Download Link",
       type: "string",
-      options: {
-        list: [
-          { value: "tag-one", title: "Tag One" },
-          { value: "tag-two", title: "Tag Two" },
-        ],
-      },
     },
   ],
 
