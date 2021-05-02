@@ -1,26 +1,18 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
 export default function NavBar() {
   return (
-    <header>
-      <div className='container mx-auto flex justify-between'>
-        <nav className='flex mx-auto'>
-          <NavLink
-            to='/'
-            exact
-            className='inflex-flex items-center text-black text-4xl font-bold tracking-wideest py-4 px-4'
-          >
-            Library
-          </NavLink>
-          <NavLink
-            to='/about'
-            className='inflex-flex items-center text-black text-4xl font-bold tracking-wideest py-4 px-4'
-          >
-            About
-          </NavLink>
-        </nav>
-      </div>
-    </header>
+    <Navbar bg='light' expand='lg'>
+      <Navbar.Brand href='#home'>Ingrid Telles de Abreu</Navbar.Brand>
+      <Navbar.Toggle aria-controls='basic-navbar-nav' />
+      <Navbar.Collapse id='basic-navbar-nav'>
+        <Nav className='mr-auto'>
+          <Nav.Link href='/'>Library</Nav.Link>
+          <Nav.Link href='/about'>About Me</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
