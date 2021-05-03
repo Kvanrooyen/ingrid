@@ -5,3 +5,18 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
+
+/* Ingrid Colour Scheme
+   - #a45350
+   - #767964
+   - #b47545
+   - #e7doca
+*/
+
+.ingrid-nav {
+  background: #a45350;
+}
+
+a {
+  color: #b47545;
+}
