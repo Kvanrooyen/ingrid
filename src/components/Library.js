@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import sanityClient from "../client";
+import "../index.css";
 
 export default function Product() {
   const [productData, setProduct] = useState(null);
@@ -18,7 +19,7 @@ export default function Product() {
       .catch(console.error);
   }, []);
   return (
-    <main className='min-h-screen p-12'>
+    <main className='min-h-screen py-4'>
       <section className='container mx-auto'>
         <div className='grid md:grid-cols-4 lg:grid-cols-5 gap-7'>
           {productData &&
