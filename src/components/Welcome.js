@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
-import Container from "react-bootstrap/Container";
-import { Col } from "react-bootstrap";
 
 export default function Welcome() {
   const [welcomeData, setWelcome] = useState(null);
