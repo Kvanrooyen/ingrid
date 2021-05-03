@@ -9,7 +9,7 @@ export default function NavBar() {
     <Navbar className='ingrid-nav' expand='lg'>
       <Navbar.Brand>
         <Link to='/' className='text-white'>
-          Ingrid Telles de Abreu
+          Dra. Ingrid Telles de Abreu
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
