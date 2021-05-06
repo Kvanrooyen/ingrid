@@ -15,16 +15,12 @@ export default function NavBar() {
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='mr-auto'>
-          <Nav.Link>
-            <Link to='/library' className='text-white'>
-              Library
-            </Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link to='/about' className='text-white'>
-              About
-            </Link>
-          </Nav.Link>
+          <Link to='/library' className='text-white p-2'>
+            Library
+          </Link>
+          <Link to='/about' className='text-white p-2'>
+            About
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
