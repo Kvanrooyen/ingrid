@@ -27,7 +27,7 @@ export default function About() {
       .catch(console.error);
   }, []);
 
-  if (!author) return <di>Loading...</di>;
+  if (!author) return <div>Loading...</div>;
 
   return (
     <Container>
