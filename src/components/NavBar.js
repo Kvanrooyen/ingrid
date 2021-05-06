@@ -1,28 +1,38 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
-import "../index.css";
 
-export default function NavBar() {
+const NavBar = ({ toggle }) => {
   return (
-    <Navbar className='ingrid-nav' expand='lg'>
-      <Navbar.Brand>
-        <Link to='/' className='text-white'>
-          Dra. Ingrid Telles de Abreu
+    <nav className='flex justify-between items-center h-12 ingrid-main relative text-xl'>
+      <Link to='/' className='pl-4 text-black'>
+        Dra. Ingrid Telles de Abreu
+      </Link>
+      <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
+        <svg
+          className='w-6 h-6'
+          fill='none'
+          stroke='currentColor'
+          viewBox='0 0 24 24'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={2}
+            d='M4 6h16M4 12h16M4 18h16'
+          />
+        </svg>
+      </div>
+      <div className='pr-8 md:block hidden'>
+        <Link className='pl-4 text-black' to='/library'>
+          Library
         </Link>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls='basic-navbar-nav' />
-      <Navbar.Collapse id='basic-navbar-nav'>
-        <Nav className='mr-auto'>
-          <Link to='/library' className='text-white p-2'>
-            Library
-          </Link>
-          <Link to='/about' className='text-white p-2'>
-            About
-          </Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+        <Link className='pl-4 text-black' to='/about'>
+          About
+        </Link>
+      </div>
+    </nav>
   );
-}
+};
+
+export default NavBar;
